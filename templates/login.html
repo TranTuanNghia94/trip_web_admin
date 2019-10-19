@@ -1,0 +1,43 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/static/login.css" type="text/css">
+        <title>TRIP</title>
+    </head>
+    <body style="background-color: #66a3ff">
+
+
+    <div class="loginContent">
+        <div class="modal-content" style="width: 400px; padding-bottom: 20px;">
+            <div style="text-align: center; margin-top: 10px ">
+                <img src="../static/images/logo.svg" alt="" height="80" width="60">
+            </div>
+            <div>
+                <h3 style="text-align: center">WELCOME TO TRIP SERVER</h3>
+            </div>
+            <form method="post" style="padding: 20px 50px">
+                {#                {{ form.csrf }}#}
+                <div class="form-group">
+                    <label for="Username">Username</label>
+                    <input type="text" class="form-control" name="Username" required>
+                </div>
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input type="password" class="form-control" name="Password" required>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%">
+                        Login
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>

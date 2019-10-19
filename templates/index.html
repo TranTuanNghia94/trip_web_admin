@@ -1,0 +1,21 @@
+{% extends "navbar.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Admin Web{% endblock %}
+
+
+{% block content %}
+    <div class="modal fade" role="dialog" id="register">
+        <div class="modal-dialog" style="background-color: #263544; color: white">
+            <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal" style="color: white" >
+                    &times;
+                </button>
+                <h2 class="modal-title text-center">REGISTER</h2>
+            </div>
+            <div class="media-body" style="padding: 25px">
+                {{ wtf.quick_form(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
